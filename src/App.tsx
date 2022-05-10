@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [counter, setCounter] = useState<number>(0)
   const handleShowAlert = () => {
     alert("Hello react")
+    setCounter(counter + 1);
   }
   return (
     <div className="App">
@@ -13,6 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+        <div>{`Alert was shown: ${counter} times`}</div>
         <button onClick={handleShowAlert}>Show alert</button>
         <a
           className="App-link"

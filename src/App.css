@@ -9,6 +9,13 @@
     align-items: center;
 }
 
+@media (max-width: 996px) {
+    .App {
+        flex-direction: column;
+    }
+}
+
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;

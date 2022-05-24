@@ -1,5 +1,5 @@
 
-.Navigation{
+.Navigation {
     min-height: 10vh;
     display: flex;
     flex-direction: row;
@@ -10,3 +10,25 @@
     margin-bottom: 20px;
 }
 
+
+.Navigation-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.Navigation-mobile {
+   display: none;
+}
+
+@media (max-width: 996px) {
+    .Navigation {
+        flex-direction: column;
+    }
+
+    .Navigation-links {
+        flex-direction: column;
+    }
+    .Navigation-mobile{
+        display: inline;
+    }
+}

@@ -37,7 +37,7 @@ export const InputForm = (props?: InputFormProps) => {
         if (formReadyToSubmit) {
             localStorage.setItem(storageFormKey, inputValue)
         }
-    }, [inputValue])
+    }, [inputValue, displayError, formReadyToSubmit])
 
     useEffect(() => {
         let valueToSet = '';
@@ -51,6 +51,7 @@ export const InputForm = (props?: InputFormProps) => {
         }
 
         setInputValue(valueToSet);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return <div style={{display: "flex", flexDirection: 'column'}}>

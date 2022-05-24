@@ -51,8 +51,7 @@ export const InputForm = (props?: InputFormProps) => {
         }
 
         setInputValue(valueToSet);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    }, [props])
 
     return <div style={{display: "flex", flexDirection: 'column'}}>
         {displayError && <div style={{color: 'red'}}>{errorMessage}</div>}

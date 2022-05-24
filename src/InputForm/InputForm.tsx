@@ -37,7 +37,7 @@ export const InputForm = (props?: InputFormProps) => {
         if (formReadyToSubmit) {
             localStorage.setItem(storageFormKey, inputValue)
         }
-    }, [inputValue])
+    }, [inputValue, formReadyToSubmit])
 
     useEffect(() => {
         let valueToSet = '';
@@ -51,7 +51,7 @@ export const InputForm = (props?: InputFormProps) => {
         }
 
         setInputValue(valueToSet);
-    }, [])
+    }, [props])
 
     return <div style={{display: "flex", flexDirection: 'column'}}>
         {displayError && <div style={{color: 'red'}}>{errorMessage}</div>}
